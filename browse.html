@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Books - GB Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="global.css">
+    <script src="data.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    
+    <main>
+        <div class="browse-layout">
+            <!-- Sidebar Filters -->
+            <aside class="filters-sidebar">
+                <h3><i class="fas fa-filter"></i> Filters</h3>
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select id="filter-category">
+                        <option value="all">All Categories</option>
+                        <option value="Academic">Academic</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="History">History</option>
+                        <option value="Bangla">Bangla Literature</option>
+                        <option value="Science">Science & Tech</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Availability</label>
+                    <select id="filter-availability">
+                        <option value="all">All</option>
+                        <option value="available">Available</option>
+                        <option value="borrowed">Borrowed (0 copies)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Search</label>
+                    <input type="text" id="filter-search" placeholder="Title / Author">
+                </div>
+                <button id="reset-filters" class="reset-btn">Reset Filters</button>
+            </aside>
+            
+            <!-- Books Grid -->
+            <div class="books-content">
+                <div id="books-grid" class="books-grid"></div>
+                <div id="pagination-controls" class="pagination"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Gono Bishwabidyalay Central Library</p>
+    </footer>
