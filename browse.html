@@ -112,3 +112,28 @@
             }
         }
         
+function initBrowse() {
+            renderBrowseBooks();
+            document.getElementById('filter-category')?.addEventListener('change', () => { currentPage = 1; renderBrowseBooks(); });
+            document.getElementById('filter-availability')?.addEventListener('change', () => { currentPage = 1; renderBrowseBooks(); });
+            document.getElementById('filter-search')?.addEventListener('input', () => { currentPage = 1; renderBrowseBooks(); });
+            document.getElementById('reset-filters')?.addEventListener('click', () => {
+                document.getElementById('filter-category').value = 'all';
+                document.getElementById('filter-availability').value = 'all';
+                document.getElementById('filter-search').value = '';
+                currentPage = 1;
+                renderBrowseBooks();
+            });
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchQuery = urlParams.get('search');
+            if(searchQuery && document.getElementById('filter-search')) {
+                document.getElementById('filter-search').value = searchQuery;
+                renderBrowseBooks();
+            }
+        }
+        
+        window.addEventListener('DOMContentLoaded', initBrowse);
+    </script>
+</body>
+</html>
