@@ -54,3 +54,61 @@
     <footer>
         <p>© 2025 Gono Bishwabidyalay Central Library</p>
     </footer>
+
+       <script>
+        let currentPage = 1;
+        const itemsPerPage = 6;
+        
+        function renderBrowseBooks() {
+            let books = getBooks();
+            const category = document.getElementById('filter-category')?.value;
+            const availability = document.getElementById('filter-availability')?.value;
+            const searchTerm = document.getElementById('filter-search')?.value.toLowerCase();
+            
+            if (category && category !== 'all') books = books.filter(b => b.category === category);
+            if (availability === 'available') books = books.filter(b => b.availableCopies > 0);
+            if (availability === 'borrowed') books = books.filter(b => b.availableCopies === 0);
+            if (searchTerm) books = books.filter(b => b.title.toLowerCase().includes(searchTerm) || b.author.toLowerCase().includes(searchTerm));
+            
+            const totalPages = Math.ceil(books.length / itemsPerPage);
+            const start = (currentPage-1) * itemsPerPage;
+            const paginated = books.slice(start, start+itemsPerPage);
+            const container = document.getElementById('books-grid');
+            if (!container) return;
+            
+            if(paginated.length === 0) { 
+                container.innerHTML = '<div class="no-results">No books found.</div>'; 
+                return; 
+            }
+            
+            container.innerHTML = paginated.map(book => `
+                <div class="book-card">
+                    <div class="book-cover"><i class="fas fa-book-open"></i></div>
+                    <h3>${escapeHtml(book.title)}</h3>
+                    <p class="author">${escapeHtml(book.author)}</p>
+                    <p class="category">${book.category}</p>
+                    <div class="book-footer">
+                        <span class="status ${book.availableCopies > 0 ? 'available' : 'unavailable'}">${book.availableCopies > 0 ? `${book.availableCopies} copies` : 'Unavailable'}</span>
+                        <a href="book-detail.html?id=${book.id}" class="details-btn">Details →</a>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Pagination
+            const pagDiv = document.getElementById('pagination-controls');
+            if(pagDiv && totalPages > 1) {
+                let btns = '';
+                for(let i = 1; i <= totalPages; i++) {
+                    btns += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+                }
+                pagDiv.innerHTML = btns;
+                document.querySelectorAll('.page-btn').forEach(btn => btn.addEventListener('click', (e) => {
+                    currentPage = parseInt(e.target.dataset.page);
+                    renderBrowseBooks();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }));
+            } else if(pagDiv) {
+                pagDiv.innerHTML = '';
+            }
+        }
+        
