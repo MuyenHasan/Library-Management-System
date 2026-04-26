@@ -56,3 +56,25 @@
             const history = getBorrowings().filter(b => b.studentId === studentId && b.returned);
             const books = getBooks();
             
+            if(borrowings.length === 0) {
+                document.getElementById('borrowed-table').innerHTML = '<div class="empty-state">No active borrowings.</div>';
+            } else {
+                let borrowedHtml = '<table class="data-table"><thead><tr><th>Title</th><th>Borrowed</th><th>Due Date</th><th>Fine</th><th>Actions</th></tr></thead><tbody>';
+                borrowings.forEach(b => {
+                    const book = books.find(bk => bk.id === b.bookId);
+                    const fine = calculateFineForBorrowing(b);
+                    borrowedHtml += `<tr>
+                        <td>${book?.title || '?'}</td>
+                        <td>${b.borrowDate}</td>
+                        <td class="${fine > 0 ? 'overdue' : ''}">${b.dueDate}</td>
+                        <td class="fine-cell">₹${fine}</td>
+                        <td class="action-cell">
+                            <button class="return-btn" data-borrow-id="${b.id}">Return</button>
+                            <button class="renew-btn" data-borrow-id="${b.id}">Renew +7d</button>
+                        </td>
+                    </tr>`;
+                });
+                borrowedHtml += '</tbody></table>';
+                document.getElementById('borrowed-table').innerHTML = borrowedHtml;
+            }
+            
