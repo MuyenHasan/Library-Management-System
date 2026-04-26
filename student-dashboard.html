@@ -77,4 +77,37 @@
                 borrowedHtml += '</tbody></table>';
                 document.getElementById('borrowed-table').innerHTML = borrowedHtml;
             }
+            if(history.length === 0) {
+                document.getElementById('history-table').innerHTML = '<div class="empty-state">No borrowing history.</div>';
+            } else {
+                let historyHtml = '<table class="data-table"><thead><tr><th>Title</th><th>Borrowed</th><th>Due</th><th>Status</th></tr></thead><tbody>';
+                history.forEach(b => {
+                    const book = books.find(bk => bk.id === b.bookId);
+                    historyHtml += `<tr>
+                        <td>${book?.title || '?'}</td>
+                        <td>${b.borrowDate}</td>
+                        <td>${b.dueDate}</td>
+                        <td><span class="returned-badge">Returned</span></td>
+                    </tr>`;
+                });
+                historyHtml += '</tbody></table>';
+                document.getElementById('history-table').innerHTML = historyHtml;
+            }
             
+            document.querySelectorAll('.return-btn').forEach(btn => btn.addEventListener('click', (e) => {
+                const borrowId = btn.dataset.borrowId;
+                if(returnBookById(borrowId)) { 
+                    alert('Book returned successfully.'); 
+                    renderStudentDashboard(); 
+                    if(typeof updateGlobalStats === 'function') updateGlobalStats();
+                } else alert('Return failed');
+            }));
+            
+            document.querySelectorAll('.renew-btn').forEach(btn => btn.addEventListener('click', (e) => {
+                const borrowId = btn.dataset.borrowId;
+                if(renewBookById(borrowId)) { 
+                    alert('Renewed (+7 days)'); 
+                    renderStudentDashboard();
+                } else alert('Renewal failed');
+            }));
+        }
