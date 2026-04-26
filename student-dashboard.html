@@ -33,3 +33,26 @@
     <footer>
         <p>© GB Central Library</p>
     </footer>
+
+    <script>
+        function renderStudentDashboard() {
+            const user = getCurrentUser();
+            if(!user || user.role !== 'student') { 
+                window.location.href = 'login.html'; 
+                return; 
+            }
+            
+            const studentId = user.studentId;
+            const totalFine = getStudentTotalFine(studentId);
+            
+            document.getElementById('student-info').innerHTML = `
+                <div>
+                    <strong>${escapeHtml(user.name)}</strong> (ID: ${studentId})
+                    <div class="fine-amount">Total Outstanding Fine: ₹${totalFine}</div>
+                </div>
+            `;
+            
+            const borrowings = getBorrowings().filter(b => b.studentId === studentId && !b.returned);
+            const history = getBorrowings().filter(b => b.studentId === studentId && b.returned);
+            const books = getBooks();
+            
