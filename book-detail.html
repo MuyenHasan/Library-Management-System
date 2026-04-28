@@ -30,3 +30,8 @@
             }
             
             const book = getBookById(bookId);
+            if(!book) { 
+                document.getElementById('book-detail-container').innerHTML = '<div class="error-msg">Book not found.</div>'; 
+                return; 
+            }
+            
