@@ -35,3 +35,8 @@
                 return; 
             }
             
+            const currentUser = getCurrentUser();
+            const isStudent = currentUser && currentUser.role === 'student';
+            const canBorrow = isStudent && book.availableCopies > 0 && getStudentTotalFine(currentUser.studentId) <= 50;
+
+            
