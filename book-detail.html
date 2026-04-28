@@ -19,3 +19,14 @@
     <footer>
         <p>© 2025 Central Library</p>
     </footer>
+
+    <script>
+        function loadBookDetail() {
+            const params = new URLSearchParams(window.location.search);
+            const bookId = params.get('id');
+            if (!bookId) { 
+                document.getElementById('book-detail-container').innerHTML = '<div class="error-msg">Invalid book ID.</div>'; 
+                return; 
+            }
+            
+            const book = getBookById(bookId);
