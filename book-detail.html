@@ -38,5 +38,9 @@
             const currentUser = getCurrentUser();
             const isStudent = currentUser && currentUser.role === 'student';
             const canBorrow = isStudent && book.availableCopies > 0 && getStudentTotalFine(currentUser.studentId) <= 50;
-
             
+             document.getElementById('book-detail-container').innerHTML = `
+                <div class="book-detail-card">
+                    <div class="book-detail-cover">
+                        <i class="fas fa-book"></i>
+                    </div>
