@@ -62,3 +62,17 @@
                         </div>
                     </div>
                 </div>
+                `;
+            
+            if(canBorrow) {
+                document.getElementById('borrow-btn')?.addEventListener('click', () => {
+                    if(borrowBook(book.id, currentUser.studentId)) {
+                        alert(`You borrowed "${book.title}". Due date: +14 days.`);
+                        window.location.href = 'student-dashboard.html';
+                    } else { 
+                        alert('Borrow failed. Possibly no copies left.'); 
+                        window.location.reload(); 
+                    }
+                });
+            }
+        }
