@@ -44,3 +44,13 @@
                     <div class="book-detail-cover">
                         <i class="fas fa-book"></i>
                     </div>
+                    <div class="book-detail-info">
+                        <h1>${escapeHtml(book.title)}</h1>
+                        <p class="detail-author">by ${escapeHtml(book.author)}</p>
+                        <div class="detail-meta">
+                            <span><i class="fas fa-barcode"></i> ISBN: ${book.isbn}</span>
+                            <span><i class="fas fa-layer-group"></i> Category: ${book.category}</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Location: ${book.location}</span>
+                            <span><i class="fas fa-copy"></i> Total: ${book.totalCopies} | Available: ${book.availableCopies}</span>
+                        </div>
+                        
