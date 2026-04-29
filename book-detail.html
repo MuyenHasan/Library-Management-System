@@ -22,24 +22,39 @@
 
     <script>
         function loadBookDetail() {
+            const container = document.getElementById('book-detail-container');
             const params = new URLSearchParams(window.location.search);
             const bookId = params.get('id');
-            if (!bookId) { 
-                document.getElementById('book-detail-container').innerHTML = '<div class="error-msg">Invalid book ID.</div>'; 
-                return; 
+
+            if (!bookId) {
+                container.innerHTML = '<div class="error-msg">Invalid book ID.</div>';
+                return;
             }
-            
+
             const book = getBookById(bookId);
-            if(!book) { 
-                document.getElementById('book-detail-container').innerHTML = '<div class="error-msg">Book not found.</div>'; 
-                return; 
+            if (!book) {
+                container.innerHTML = '<div class="error-msg">Book not found.</div>';
+                return;
             }
-            
+
             const currentUser = getCurrentUser();
             const isStudent = currentUser && currentUser.role === 'student';
-            const canBorrow = isStudent && book.availableCopies > 0 && getStudentTotalFine(currentUser.studentId) <= 50;
-            
-             document.getElementById('book-detail-container').innerHTML = `
+            let borrowSection = '';
+
+            if (isStudent) {
+                const fine = getStudentTotalFine(currentUser.studentId);
+                if (fine > 50) {
+                    borrowSection = `<p class="fine-warning"><i class="fas fa-exclamation-triangle"></i> Cannot borrow: outstanding fine &gt; ₹50</p>`;
+                } else if (book.availableCopies > 0) {
+                    borrowSection = `<button id="borrow-btn" class="borrow-btn"><i class="fas fa-hand-holding-heart"></i> Borrow this Book</button>`;
+                } else {
+                    borrowSection = `<button class="borrow-btn disabled" disabled>Not Available</button>`;
+                }
+            } else {
+                borrowSection = `<button class="borrow-btn disabled" disabled>Login as student to borrow</button>`;
+            }
+
+            container.innerHTML = `
                 <div class="book-detail-card">
                     <div class="book-detail-cover">
                         <i class="fas fa-book"></i>
@@ -54,29 +69,28 @@
                             <span><i class="fas fa-copy"></i> Total: ${book.totalCopies} | Available: ${book.availableCopies}</span>
                         </div>
                         <div class="detail-actions">
-                            ${canBorrow ? `<button id="borrow-btn" class="borrow-btn"><i class="fas fa-hand-holding-heart"></i> Borrow this Book</button>` : 
-                              (isStudent && book.availableCopies === 0 ? `<button class="borrow-btn disabled" disabled>Not Available</button>` : 
-                              (isStudent && getStudentTotalFine(currentUser?.studentId) > 50 ? `<p class="fine-warning"><i class="fas fa-exclamation-triangle"></i> Cannot borrow: outstanding fine > ₹50</p>` : 
-                              `<button class="borrow-btn disabled" disabled>Login as student to borrow</button>`))}
+                            ${borrowSection}
                             <a href="browse.html" class="back-link">← Back to browse</a>
                         </div>
                     </div>
                 </div>
-                `;
-            
-            if(canBorrow) {
+            `;
+
+            // Attach borrow event if allowed
+            if (isStudent && getStudentTotalFine(currentUser.studentId) <= 50 && book.availableCopies > 0) {
                 document.getElementById('borrow-btn')?.addEventListener('click', () => {
-                    if(borrowBook(book.id, currentUser.studentId)) {
-                        alert(`You borrowed "${book.title}". Due date: +14 days.`);
+                    const success = borrowBook(book.id, currentUser.studentId);
+                    if (success) {
+                        alert(`You borrowed \"${book.title}\". Due date: +14 days.`);
                         window.location.href = 'student-dashboard.html';
-                    } else { 
-                        alert('Borrow failed. Possibly no copies left.'); 
-                        window.location.reload(); 
+                    } else {
+                        alert('Borrow failed. Possibly no copies left.');
+                        window.location.reload();
                     }
                 });
             }
         }
-        
+
         window.addEventListener('DOMContentLoaded', loadBookDetail);
     </script>
 </body>
