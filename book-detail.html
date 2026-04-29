@@ -53,4 +53,12 @@
                             <span><i class="fas fa-map-marker-alt"></i> Location: ${book.location}</span>
                             <span><i class="fas fa-copy"></i> Total: ${book.totalCopies} | Available: ${book.availableCopies}</span>
                         </div>
-                        
+                        <div class="detail-actions">
+                            ${canBorrow ? `<button id="borrow-btn" class="borrow-btn"><i class="fas fa-hand-holding-heart"></i> Borrow this Book</button>` : 
+                              (isStudent && book.availableCopies === 0 ? `<button class="borrow-btn disabled" disabled>Not Available</button>` : 
+                              (isStudent && getStudentTotalFine(currentUser?.studentId) > 50 ? `<p class="fine-warning"><i class="fas fa-exclamation-triangle"></i> Cannot borrow: outstanding fine > ₹50</p>` : 
+                              `<button class="borrow-btn disabled" disabled>Login as student to borrow</button>`))}
+                            <a href="browse.html" class="back-link">← Back to browse</a>
+                        </div>
+                    </div>
+                </div>
