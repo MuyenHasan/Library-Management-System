@@ -36,3 +36,20 @@
                 <p class="stat-value">1,284</p>
                 <p class="stat-label">Registered Members</p>
             </div>
+        </div>
+        
+        <div class="add-book-section">
+            <h2>➕ Add New Book</h2>
+            <form id="addBookForm" class="add-book-form">
+                <input type="text" id="bookTitle" placeholder="Title" required>
+                <input type="text" id="bookAuthor" placeholder="Author" required>
+                <select id="bookCategory">
+                    <option>Academic</option><option>Fiction</option><option>History</option><option>Bangla</option><option>Science</option>
+                </select>
+                <input type="number" id="bookCopies" placeholder="Total Copies" value="1" required>
+                <input type="text" id="bookIsbn" placeholder="ISBN">
+                <input type="text" id="bookLocation" placeholder="Location">
+                <button type="submit" class="submit-btn">➕ Add Book</button>
+            </form>
+        </div>
+         
