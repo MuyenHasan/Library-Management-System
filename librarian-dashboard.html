@@ -75,3 +75,7 @@
             const borrowings = getBorrowings().filter(b => !b.returned);
             const overdue = borrowings.filter(b => new Date(b.dueDate) < new Date());
             
+            document.getElementById('lib-total-books').innerText = books.reduce((s, b) => s + b.totalCopies, 0);
+            document.getElementById('lib-active-loans').innerText = borrowings.length;
+            document.getElementById('lib-overdue').innerText = overdue.length;
+            
