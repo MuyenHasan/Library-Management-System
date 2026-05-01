@@ -79,3 +79,14 @@
             document.getElementById('lib-active-loans').innerText = borrowings.length;
             document.getElementById('lib-overdue').innerText = overdue.length;
             
+            const manageDiv = document.getElementById('manage-books-list');
+            manageDiv.innerHTML = books.map(book => `
+                <div class="book-manage-item">
+                    <div class="book-info">
+                        <strong>${escapeHtml(book.title)}</strong> by ${escapeHtml(book.author)} 
+                        <span class="copy-info">(${book.availableCopies}/${book.totalCopies} available)</span>
+                    </div>
+                    <button class="delete-book-btn" data-id="${book.id}">Delete</button>
+                </div>
+            `).join('');
+            
