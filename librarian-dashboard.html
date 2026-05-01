@@ -62,3 +62,12 @@
     <footer>
         <p>© Gono Bishwabidyalay Central Library</p>
     </footer>
+
+    <script>
+        function renderLibrarianDash() {
+            const user = getCurrentUser();
+            if(!user || user.role !== 'librarian') { 
+                window.location.href = 'login.html'; 
+                return; 
+            }
+            
