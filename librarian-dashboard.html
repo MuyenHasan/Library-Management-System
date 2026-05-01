@@ -71,3 +71,7 @@
                 return; 
             }
             
+            const books = getBooks();
+            const borrowings = getBorrowings().filter(b => !b.returned);
+            const overdue = borrowings.filter(b => new Date(b.dueDate) < new Date());
+            
