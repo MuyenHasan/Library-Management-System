@@ -89,4 +89,12 @@
                     <button class="delete-book-btn" data-id="${book.id}">Delete</button>
                 </div>
             `).join('');
+             
+            document.querySelectorAll('.delete-book-btn').forEach(btn => btn.addEventListener('click', () => {
+                if(confirm('Delete this book?')) { 
+                    deleteBookById(btn.dataset.id); 
+                    renderLibrarianDash(); 
+                    if(typeof updateGlobalStats === 'function') updateGlobalStats();
+                }
+            }));
             
