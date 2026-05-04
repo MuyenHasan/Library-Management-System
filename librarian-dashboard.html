@@ -101,3 +101,12 @@
             document.getElementById('addBookForm')?.addEventListener('submit', (e) => {
                 e.preventDefault(); 
                 const newBook = { 
+                    id: Date.now().toString(), 
+                    title: document.getElementById('bookTitle').value, 
+                    author: document.getElementById('bookAuthor').value, 
+                    category: document.getElementById('bookCategory').value, 
+                    totalCopies: parseInt(document.getElementById('bookCopies').value), 
+                    availableCopies: parseInt(document.getElementById('bookCopies').value), 
+                    isbn: document.getElementById('bookIsbn').value || 'N/A', 
+                    location: document.getElementById('bookLocation').value || 'Main Stack' 
+                };
