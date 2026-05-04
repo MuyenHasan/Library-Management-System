@@ -110,3 +110,9 @@
                     isbn: document.getElementById('bookIsbn').value || 'N/A', 
                     location: document.getElementById('bookLocation').value || 'Main Stack' 
                 };
+                addNewBook(newBook); 
+                alert('Book added!'); 
+                e.target.reset(); 
+                renderLibrarianDash(); 
+                if(typeof updateGlobalStats === 'function') updateGlobalStats();
+            });
