@@ -51,3 +51,10 @@ body {
 .nav-brand i {
     font-size: 1.8rem;
 }
+
+.nav-links {
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
