@@ -87,3 +87,10 @@ body {
     cursor: pointer;
     font-size: 0.8rem;
 }
+
+.login-link {
+    background: var(--primary-dark);
+    color: white !important;
+    padding: 0.4rem 1.2rem;
+    border-radius: 25px;
+}
