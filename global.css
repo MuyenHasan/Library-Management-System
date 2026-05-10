@@ -94,3 +94,11 @@ body {
     padding: 0.4rem 1.2rem;
     border-radius: 25px;
 }
+
+/* Main container */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: calc(100vh - 200px);
+}
