@@ -77,3 +77,13 @@ body {
     padding: 0.3rem 1rem;
     border-radius: 30px;
 }
+
+.logout-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
