@@ -68,3 +68,12 @@ body {
 .nav-links a:hover {
     color: var(--primary-dark);
 }
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #f0f0e8;
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+}
