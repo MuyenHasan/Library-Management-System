@@ -102,3 +102,12 @@ main {
     padding: 2rem;
     min-height: calc(100vh - 200px);
 }
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+    border-radius: 1.5rem;
+    padding: 3rem;
+    margin-bottom: 2.5rem;
+    color: white;
+}
