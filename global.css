@@ -122,3 +122,9 @@ main {
     opacity: 0.9;
     margin-bottom: 1.5rem;
 }
+
+
+.search-wrapper {
+    position: relative;
+    max-width: 500px;
+}
