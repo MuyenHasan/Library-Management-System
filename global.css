@@ -136,3 +136,11 @@ main {
     border-radius: 50px;
     font-size: 1rem;
 }
+
+.search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
