@@ -179,3 +179,9 @@ main {
     font-size: 0.8rem;
     color: #666;
 }
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
