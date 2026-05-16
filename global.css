@@ -201,3 +201,11 @@ main {
 .section-header h2 {
     font-size: 1.5rem;
 }
+
+.view-all {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+.view-all:hover {
+    text-decoration: underline;
+}
