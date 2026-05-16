@@ -190,3 +190,9 @@ main {
 .section {
     margin-bottom: 2.5rem;
 }
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
