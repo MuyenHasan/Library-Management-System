@@ -240,3 +240,8 @@ main {
     justify-content: center;
     margin-bottom: 0.8rem;
 }
+.book-cover img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
