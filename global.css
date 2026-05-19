@@ -230,3 +230,13 @@ main {
     box-shadow: 0 12px 25px rgba(0,0,0,0.15);
     border-color: var(--primary-light);
 }
+
+.book-cover {
+    height: 140px;
+    background: #f0f0e8;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+}
