@@ -245,3 +245,7 @@ main {
     max-width: 100%;
     border-radius: 0.5rem;
 }
+.book-cover i {
+    font-size: 3rem;
+    color: var(--primary-light);
+}
