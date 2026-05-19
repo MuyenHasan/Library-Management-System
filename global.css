@@ -249,3 +249,8 @@ main {
     font-size: 3rem;
     color: var(--primary-light);
 }
+
+.book-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
