@@ -267,3 +267,6 @@ main {
     color: white;
     display: inline-block;
 }
+.book-card .status.read {
+    background: var(--primary-light);
+}
