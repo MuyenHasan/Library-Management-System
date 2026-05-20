@@ -260,10 +260,10 @@ main {
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
 }
-/* .book-card .status {
+.book-card .status {
     font-size: 0.8rem;
     padding: 0.2rem 0.5rem;
     border-radius: 15px;
     color: white;
     display: inline-block;
-} */
+}
