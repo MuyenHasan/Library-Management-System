@@ -276,3 +276,9 @@ main {
     color: #888;
     margin-bottom: 0.8rem;
 }
+
+.book-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
