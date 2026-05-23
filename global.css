@@ -308,3 +308,8 @@ main {
     background: #f8d7da;
     color: #721c24;
 }
+
+.status.unavailable {
+    background: #f8d7da;
+    color: #721c24;
+}
