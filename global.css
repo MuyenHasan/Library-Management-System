@@ -313,3 +313,9 @@ main {
     background: #f8d7da;
     color: #721c24;
 }
+
+.details-btn {
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-size: 0.8rem;
+}
