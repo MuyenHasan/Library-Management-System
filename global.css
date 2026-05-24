@@ -341,3 +341,8 @@ main {
 .announcement h3 i {
     color: #f59e0b;
 }
+
+.announcement ul {
+    margin-left: 1.5rem;
+    color: #666;
+}
