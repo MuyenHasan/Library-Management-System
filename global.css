@@ -331,3 +331,13 @@ main {
     border-radius: 0.5rem;
     margin-top: 1rem;
 }
+
+.announcement h3 {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.announcement h3 i {
+    color: #f59e0b;
+}
