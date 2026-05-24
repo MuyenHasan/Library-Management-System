@@ -322,3 +322,12 @@ main {
 .details-btn:hover {
     text-decoration: underline;
 }
+
+/* Announcement */
+.announcement {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
