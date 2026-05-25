@@ -360,3 +360,8 @@ main {
     font-weight: bold;
     font-size: 1.1rem;
 }
+/* Browse Layout */
+.browse-layout {
+    display: flex;
+    gap: 2rem;
+}
