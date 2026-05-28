@@ -407,3 +407,6 @@ main {
     cursor: pointer;
     margin-top: 0.5rem;
 }
+.reset-btn:hover {
+    background: #d0d0d0;
+}
