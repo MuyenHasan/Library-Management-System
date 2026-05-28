@@ -382,3 +382,10 @@ main {
 .filter-group {
     margin-bottom: 1rem;
 }
+
+.filter-group label {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+    color: #666;
+}
