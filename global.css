@@ -431,3 +431,8 @@ main {
     border-radius: 0.3rem;
     cursor: pointer;
 }
+.page-btn.active {
+    background: var(--primary-light);
+    color: white;
+    border-color: var(--primary-light);
+}
