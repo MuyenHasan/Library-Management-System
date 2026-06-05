@@ -410,3 +410,8 @@ main {
 .reset-btn:hover {
     background: #d0d0d0;
 }
+
+
+.books-content {
+    flex: 1;
+}
