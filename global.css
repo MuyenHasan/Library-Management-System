@@ -452,3 +452,12 @@ main {
     padding: 2rem;
     border-radius: 1rem;
 }
+
+.book-detail-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
