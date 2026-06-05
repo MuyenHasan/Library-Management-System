@@ -445,3 +445,10 @@ main {
     max-width: 900px;
     margin: 0 auto;
 }
+.book-detail {
+    display: flex;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
