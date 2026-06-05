@@ -439,3 +439,9 @@ main {
 .page-btn:hover:not(.active) {
     background: #f0f0e8;
 }
+
+/* Book Detail Page */
+.book-detail-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
