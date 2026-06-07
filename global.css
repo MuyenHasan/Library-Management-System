@@ -476,3 +476,7 @@ main {
     font-size: 5rem;
     color: var(--primary-light);
 }
+
+.book-detail-info {
+    flex: 1;
+}
