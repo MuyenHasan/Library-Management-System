@@ -485,3 +485,9 @@ main {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
+
+.detail-author {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
