@@ -501,3 +501,8 @@ main {
     background: #f8f8f4;
     border-radius: 0.5rem;
 }
+.detail-meta .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
