@@ -506,3 +506,11 @@ main {
     flex-direction: column;
     gap: 0.3rem;
 }
+
+.detail-meta span {
+    font-size: 0.9rem;
+}
+.detail-meta .meta-label {
+    color: #666;
+    font-size: 0.8rem;
+}
