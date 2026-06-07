@@ -461,3 +461,13 @@ main {
     gap: 2rem;
     flex-wrap: wrap;
 }
+
+.book-detail-cover {
+    flex: 0 0 200px;
+    background: #f0f0e8;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
