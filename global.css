@@ -536,3 +536,8 @@ main {
     font-size: 1rem;
     margin-right: 1rem;
 }
+
+.borrow-btn.disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
