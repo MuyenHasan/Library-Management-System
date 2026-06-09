@@ -518,3 +518,10 @@ main {
 .detail-actions {
     margin-top: 1.5rem;
 }
+.detail-actions .action-btn {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
