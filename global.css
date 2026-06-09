@@ -514,3 +514,7 @@ main {
     color: #666;
     font-size: 0.8rem;
 }
+
+.detail-actions {
+    margin-top: 1.5rem;
+}
