@@ -555,3 +555,6 @@ main {
     color: var(--primary-dark);
     text-decoration: none;
 }
+.back-link:hover {
+    text-decoration: underline;
+}
