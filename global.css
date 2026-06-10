@@ -558,3 +558,8 @@ main {
 .back-link:hover {
     text-decoration: underline;
 }
+
+.fine-warning {
+    color: #dc2626;
+    margin-bottom: 1rem;
+}
