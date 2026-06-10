@@ -563,3 +563,8 @@ main {
     color: #dc2626;
     margin-bottom: 1rem;
 }
+
+/* Dashboard */
+.dashboard-header {
+    margin-bottom: 1.5rem;
+}
