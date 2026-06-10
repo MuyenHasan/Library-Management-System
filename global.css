@@ -550,3 +550,8 @@ main {
     cursor: pointer;
     font-size: 1rem;
 }
+
+.back-link {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
