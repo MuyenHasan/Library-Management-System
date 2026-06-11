@@ -589,3 +589,7 @@ main {
     color: #dc2626;
     font-weight: bold;
 }
+
+.dashboard-section {
+    margin-bottom: 2rem;
+}
