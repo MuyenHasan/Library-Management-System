@@ -584,3 +584,8 @@ main {
     gap: 1rem;
     align-items: center;
 }
+
+.fine-amount {
+    color: #dc2626;
+    font-weight: bold;
+}
