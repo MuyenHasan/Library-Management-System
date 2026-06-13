@@ -593,3 +593,8 @@ main {
 .dashboard-section {
     margin-bottom: 2rem;
 }
+
+.dashboard-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
