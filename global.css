@@ -598,3 +598,13 @@ main {
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
+
+.table-wrapper {
+    background: white;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
