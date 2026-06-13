@@ -613,3 +613,10 @@ main {
     width: 100%;
     border-collapse: collapse;
 }
+
+.data-table th,
+.data-table td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
