@@ -620,3 +620,11 @@ main {
     text-align: left;
     border-bottom: 1px solid var(--border-color);
 }
+.data-table th {
+    background: #f0f0e8;
+}
+
+.data-table th {
+    background: #f8f8f4;
+    font-weight: 600;
+}
