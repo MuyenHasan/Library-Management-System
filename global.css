@@ -628,3 +628,8 @@ main {
     background: #f8f8f4;
     font-weight: 600;
 }
+
+.fine-cell {
+    color: #dc2626;
+    font-weight: bold;
+}
