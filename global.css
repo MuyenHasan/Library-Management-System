@@ -647,3 +647,8 @@ main {
     font-size: 0.75rem;
     margin-right: 0.3rem;
 }
+
+.return-btn {
+    background: #10b981;
+    color: white;
+}
