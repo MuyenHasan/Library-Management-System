@@ -671,3 +671,8 @@ main {
     text-align: center;
     color: #666;
 }
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-light);
+}
