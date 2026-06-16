@@ -665,3 +665,9 @@ main {
     border-radius: 20px;
     font-size: 0.7rem;
 }
+
+.empty-state {
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+}
