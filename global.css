@@ -676,3 +676,9 @@ main {
     margin-bottom: 1rem;
     color: var(--primary-light);
 }
+
+/* Librarian Dashboard */
+.page-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
