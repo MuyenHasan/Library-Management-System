@@ -697,3 +697,8 @@ main {
     border-radius: 1rem;
     margin-bottom: 2rem;
 }
+
+.add-book-section h2,
+.manage-books-section h2 {
+    margin-bottom: 1rem;
+}
