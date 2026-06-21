@@ -715,3 +715,12 @@ main {
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
 }
+
+.submit-btn {
+    background: var(--primary-dark);
+    color: white;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
