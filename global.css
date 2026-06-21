@@ -708,3 +708,10 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
+
+.add-book-form input,
+.add-book-form select {
+    padding: 0.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
