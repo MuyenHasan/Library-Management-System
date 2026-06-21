@@ -724,3 +724,6 @@ main {
     border-radius: 0.5rem;
     cursor: pointer;
 }
+.submit-btn:hover {
+    background: var(--primary-light);
+}
