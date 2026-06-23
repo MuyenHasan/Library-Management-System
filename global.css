@@ -732,3 +732,11 @@ main {
     max-height: 400px;
     overflow-y: auto;
 }
+
+.book-manage-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+}
