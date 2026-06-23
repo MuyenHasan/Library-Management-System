@@ -740,3 +740,7 @@ main {
     padding: 0.8rem;
     border-bottom: 1px solid var(--border-color);
 }
+
+.book-info strong {
+    color: var(--primary-dark);
+}
