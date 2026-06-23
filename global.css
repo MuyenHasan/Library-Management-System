@@ -744,3 +744,8 @@ main {
 .book-info strong {
     color: var(--primary-dark);
 }
+
+.copy-info {
+    font-size: 0.8rem;
+    color: #666;
+}
