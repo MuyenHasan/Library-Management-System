@@ -727,3 +727,8 @@ main {
 .submit-btn:hover {
     background: var(--primary-light);
 }
+
+.books-manage-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
