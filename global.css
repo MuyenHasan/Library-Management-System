@@ -749,3 +749,12 @@ main {
     font-size: 0.8rem;
     color: #666;
 }
+
+.delete-book-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
