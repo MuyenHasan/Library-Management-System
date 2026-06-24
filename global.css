@@ -789,3 +789,9 @@ main {
     text-align: center;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
+
+.login-icon {
+    font-size: 3rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
