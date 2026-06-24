@@ -774,3 +774,8 @@ main {
     width: 100%;
     max-width: 400px;
 }
+
+.login-container {
+    width: 100%;
+    padding: 1rem;
+}
