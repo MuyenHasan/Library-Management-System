@@ -758,3 +758,12 @@ main {
     border-radius: 0.3rem;
     cursor: pointer;
 }
+
+/* Login Page */
+.login-body {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
