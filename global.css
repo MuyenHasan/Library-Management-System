@@ -804,3 +804,9 @@ main {
     color: #666;
     margin-bottom: 1.5rem;
 }
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
