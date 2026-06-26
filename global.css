@@ -818,3 +818,7 @@ main {
     font-size: 1rem;
     transition: opacity 0.3s;
 }
+
+.login-btn:hover {
+    opacity: 0.9;
+}
