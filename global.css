@@ -822,3 +822,7 @@ main {
 .login-btn:hover {
     opacity: 0.9;
 }
+.student-btn {
+    background: var(--primary-dark);
+    color: white;
+}
