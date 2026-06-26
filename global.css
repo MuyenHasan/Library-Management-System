@@ -826,3 +826,8 @@ main {
     background: var(--primary-dark);
     color: white;
 }
+
+.librarian-btn {
+    background: #1e40af;
+    color: white;
+}
