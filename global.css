@@ -837,3 +837,13 @@ main {
     font-size: 0.7rem;
     color: #999;
 }
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #aaa;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.8rem;
+}
