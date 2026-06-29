@@ -831,3 +831,9 @@ main {
     background: #1e40af;
     color: white;
 }
+
+.demo-note {
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    color: #999;
+}
