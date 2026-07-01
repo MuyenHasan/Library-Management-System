@@ -883,3 +883,12 @@ footer {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     }
     
+    .book-detail-card {
+        flex-direction: column;
+    }
+    
+    .book-detail-cover {
+        flex: auto;
+        height: 180px;
+    }
+}
