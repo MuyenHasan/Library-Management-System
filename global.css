@@ -892,3 +892,23 @@ footer {
         height: 180px;
     }
 }
+
+@media (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .add-book-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+    }
+    
+    .return-btn, .renew-btn {
+        font-size: 0.65rem;
+    }
+}
